@@ -1,8 +1,8 @@
 package day_6;
+
 import java.util.*;
 
-
-public class main {
+public class parv {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         int test =sc.nextInt();
@@ -24,6 +24,7 @@ public class main {
             System.out.println(even+" "+odd);
 
         }
+        System.out.println();
 
     }
 }
