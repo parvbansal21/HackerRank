@@ -27,5 +27,3 @@ public class parv {
        System.out.print(diff.maximumDiffrence);
     }
 }
-// yo
-// yo
