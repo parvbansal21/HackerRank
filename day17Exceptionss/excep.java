@@ -1,5 +1,6 @@
 package day17Exceptionss;
 
+// try and catch 
 public class excep {
     
     public static void main(String[] args) {
