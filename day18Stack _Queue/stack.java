@@ -1,48 +1,52 @@
-package day18Stack_Queue;
-
 import java.util.*;
 
-class stack {
+class Solution {
 
-    Stack<Character> s = new Stack<>();
-    Queue<Character> q = new LinkedList<>();
+    Stack<Character> stack = new Stack<>();
+    Queue<Character> queue = new LinkedList<>();
 
     void pushCharacter(char ch) {
-        s.push(ch);
+        stack.push(ch);
     }
 
     void enqueueCharacter(char ch) {
-        q.add(ch);
+        queue.add(ch);
     }
 
     char popCharacter() {
-        return s.pop();
+        return stack.pop();
     }
 
     char dequeueCharacter() {
-        return q.remove();
+        return queue.remove();
     }
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        String S = sc.nextLine();
 
-        stack obj = new stack();
-        for (int i = 0; i < S.length(); i++) {
-            obj.pushCharacter(S.charAt(i));
-            obj.enqueueCharacter(S.charAt(i));
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+
+        Solution obj = new Solution();
+
+        for(int i = 0; i < s.length(); i++){
+            obj.pushCharacter(s.charAt(i));
+            obj.enqueueCharacter(s.charAt(i));
         }
+
         boolean isPalindrome = true;
-        for (int i = 0; i < S.length() / 2; i++) {
-            if (obj.popCharacter() != obj.dequeueCharacter()) {
+
+        for(int i = 0; i < s.length()/2; i++){
+            if(obj.popCharacter() != obj.dequeueCharacter()){
                 isPalindrome = false;
                 break;
             }
         }
-        if (isPalindrome) {
-            System.out.println("The word, " + S + ", is a palindrome.");
-        } else {
-            System.out.println("The word, " + S + ", is not a palindrome.");
+
+        if(isPalindrome){
+            System.out.println("The word, " + s + ", is a palindrome.");
+        }
+        else{
+            System.out.println("The word, " + s + ", is not a palindrome.");
         }
     }
 }
