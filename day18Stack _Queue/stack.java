@@ -16,7 +16,7 @@ class Solution {
     char popCharacter() {
         return stack.pop();
     }
-
+// yo
     char dequeueCharacter() {
         return queue.remove();
     }
@@ -50,3 +50,4 @@ class Solution {
         }
     }
 }
+// yooooo
