@@ -7,7 +7,7 @@ public class sort {
         Scanner sc =new Scanner(System.in);
         int n=sc.nextInt();
         int a[]=new int[n];
-        for (int i=0;i<=n;i++){
+        for (int i=0;i<n;i++){
              a[i]=sc.nextInt(); 
         }
         int noofswapping=0;
